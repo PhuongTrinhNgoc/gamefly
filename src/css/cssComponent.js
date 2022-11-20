@@ -119,7 +119,7 @@ export const Img2 = styled.img`
 `;
 export const Logo = styled.div`
   &.logo {
-    width: 6%;
+    width: 80px;
     height: 100%;
     position: relative;
   }

@@ -97,11 +97,15 @@ const Header = () => {
         className={`navbar${sticky.isSticky ? " sticky" : ""} nav`}
       >
         <Logo className="logo">
-          <RotateInDiv style={{ width: "100%", position: "absolute" }}>
+          <RotateInDiv
+            style={{ width: "100%", position: "absolute", top: "4px" }}
+          >
             {" "}
             <Img src={src2} />
           </RotateInDiv>
-          <RotateOutDiv style={{ width: "100%", position: "absolute" }}>
+          <RotateOutDiv
+            style={{ width: "100%", position: "absolute", top: "4px" }}
+          >
             {" "}
             <Img src={src} />
           </RotateOutDiv>
