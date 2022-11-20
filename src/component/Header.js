@@ -102,7 +102,7 @@ const Header = () => {
               width: "100%",
               position: "absolute",
               top: "4px",
-              height: "100%",
+              height: "94%",
             }}
           >
             {" "}
@@ -113,7 +113,7 @@ const Header = () => {
               width: "100%",
               position: "absolute",
               top: "4px",
-              height: "100%",
+              height: "94%",
             }}
           >
             {" "}
