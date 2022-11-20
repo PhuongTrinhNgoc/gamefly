@@ -50,12 +50,11 @@ const GameList = () => {
                 sx={
                   focus === index + 1
                     ? {
-                        // background: "none",
                         color: "#fff",
                       }
                     : {
                         background: "#fff",
-                        color: "#000c",
+                        color: "black",
                       }
                 }
                 variant="contained"
