@@ -169,10 +169,9 @@ const ListItem = () => {
                       sx={
                         focus === index + 1
                           ? {
-                              background: "blue",
                               color: "#fff",
                             }
-                          : { background: "red", color: "#fff" }
+                          : { background: "#fff", color: "#000c" }
                       }
                       variant="contained"
                     >

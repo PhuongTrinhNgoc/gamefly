@@ -81,7 +81,7 @@ function App() {
           <Route path="game/infoGame/:id/cart" element={<Cart />} />
           <Route path="game/infoGame/:id" element={<InfoGame />} />
           <Route path="cart/self" element={<Self />} />
-          {/* <Route path="cart/" element={<Cart />} /> */}
+          <Route path="cart/" element={<Cart />} />
           <Route path="blogid/:id" element={<InfoBlog />} />
           <Route path="listItem" element={<ListItem />} />
           <Route path="listItem/infoGame/:id/cart" element={<Cart />} />

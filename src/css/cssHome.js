@@ -968,6 +968,7 @@ export const CheckOut = styled.div``;
 export const ItemRow = styled.div`
   margin-top: 50px;
   color: #fff;
+  text-decoration: none;
   .col4-1 {
     border-left: 1px solid gray;
     padding-left: 50px;
@@ -983,9 +984,10 @@ export const ItemRow = styled.div`
   }
   .rowItem {
     display: flex;
-    margin-bottom: 20px;
-    padding: 20px;
-
+    /* margin-bottom: 20px; */
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
     text-align: center;
     div {
       display: flex;
