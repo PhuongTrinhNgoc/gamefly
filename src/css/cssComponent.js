@@ -87,7 +87,7 @@ export const DflexAll = styled.div`
     right: 16%; */
     color: black;
     text-align: center;
-    div div .css-1l1167e {
+    div div button {
       padding: 0 !important;
     }
     img {
