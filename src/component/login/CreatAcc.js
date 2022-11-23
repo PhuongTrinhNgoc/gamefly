@@ -23,7 +23,7 @@ const uiConfig = {
   ],
 };
 
-const Login = () => {
+const CreatAcc = () => {
   const src = "../images/avatar.png";
   const src2 = "../images/avatar2.png";
 
@@ -62,18 +62,11 @@ const Login = () => {
         >
           <TextField id="demo-helper-text-misaligned" label="Name" />
           <TextField id="demo-helper-text-misaligned" label="Pass" />
-          <Button className="btn-login" variant="contained">
-            Login
-          </Button>
-          <div class="loginSignUpSeparator ">
-            <span class="textInSeparator">or</span>
-          </div>
+          <TextField id="demo-helper-text-misaligned" label="RE-enter Pass" />
 
-          <Link to="CreatAcc">
-            <Button className="btn-creat" variant="outlined">
-              creat account
-            </Button>
-          </Link>
+          <Button className="btn-creat" variant="outlined">
+            creat account
+          </Button>
           <div style={{ textAlign: "start" }}>
             {" "}
             <Link style={{ textDecoration: "none" }} to="/">
@@ -91,4 +84,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default CreatAcc;

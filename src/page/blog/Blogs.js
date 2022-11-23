@@ -1,34 +1,34 @@
-import { H1 } from "../../css/cssHome";
-
-import styled from "styled-components";
-
-const ViewDiv = styled.div`
-  margin-top: 34vh;
-  width: 100px;
-  height: 100px;
-  background-color: "blue";
-  &.box {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-  }
-`;
-const Text = styled.p`
-  font-weight: 700;
-  font-size: 30px;
-  &.red {
-    color: yellow;
-  }
-`;
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { MainBlog } from "../../css/cssBlog";
+import { H5blog, ImgBlog, Pblog } from "../../css/cssHome";
 
 const Blogs = () => {
+  const { products } = useSelector((state) => state.products);
+
   return (
-    <ViewDiv>
-      <ViewDiv className="box">
-        <Text className="red">Baloo</Text>
-      </ViewDiv>
-      <Text>hello</Text>
-    </ViewDiv>
+    <MainBlog>
+      <div className="container">
+        <div className="row">
+          {products &&
+            products.blogs.map((item, key) => {
+              return (
+                <div className="col-3">
+                  <Link
+                    to={`blogs/${item.id}`}
+                    key={key}
+                    className="blog-items"
+                  >
+                    <ImgBlog src={item.img} />
+                    <H5blog>{item.title}</H5blog>
+                    <Pblog>{item.text}</Pblog>
+                  </Link>
+                </div>
+              );
+            })}
+        </div>
+      </div>
+    </MainBlog>
   );
 };
 export default Blogs;

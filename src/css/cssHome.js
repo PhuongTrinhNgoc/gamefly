@@ -374,8 +374,8 @@ export const ImgHoverItem = styled.img`
 
 //cart
 export const MainCart = styled.div`
-  padding: 50px 130px;
-  padding-top: 120px;
+  padding: 235px 130px;
+  padding-top: 180px;
   background: rgb(18, 18, 18);
   color: #fff;
   font-family: Brutal, sans-serif;

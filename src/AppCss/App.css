@@ -178,6 +178,13 @@
 
   /* padding-top: 25px; */
 }
+.main-category .blog-items {
+  text-decoration: none;
+  color: #000c;
+}
+.main-category .row .col3-hover:hover a div {
+  color: #2871c6;
+}
 .blog-items {
   text-decoration: none;
   color: #000c;

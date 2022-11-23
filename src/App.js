@@ -13,6 +13,7 @@ import { initializeApp } from "firebase/app";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import Login from "./component/login/Login";
+import CreatAcc from "./component/login/CreatAcc";
 import { getFectProdust } from "./redux/slice/producSlice";
 import { unwrapResult } from "@reduxjs/toolkit";
 // import productApi from 'api/productApi';
@@ -72,6 +73,8 @@ function App() {
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="fqa" element={<FQA />} />
           <Route path="login" element={<Login />} />
+          <Route path="login/CreatAcc" element={<CreatAcc />} />
+
           {/* <Route path="login" element={<User />} /> */}
           <Route path="infoGame/:id" element={<InfoGame />} />
           <Route path="infoGame/:id/cart" element={<Cart />} />
