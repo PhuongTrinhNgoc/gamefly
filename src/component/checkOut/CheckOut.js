@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import { MainCartCss } from "../../css/cssComponent";
 const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
   const [valueInputCode, setValueInputCode] = useState("");
 
@@ -29,7 +30,7 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
   };
 
   return (
-    <div className="">
+    <MainCartCss className="">
       {" "}
       {open === true ? (
         <div className="main-checkout">
@@ -301,10 +302,20 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
                               />
                             </div>
                             <div>
-                              {valueInputCode === SALECODE ? (
-                                <div>sussise</div>
+                              {valueInputCode.length > 0 ? (
+                                <div>
+                                  {valueInputCode === SALECODE ? (
+                                    <div className="sus">
+                                      * Discount code is being applied
+                                    </div>
+                                  ) : (
+                                    <div className="no-sus">
+                                      * discount code is not correct
+                                    </div>
+                                  )}
+                                </div>
                               ) : (
-                                <div>* sussise</div>
+                                ""
                               )}
                             </div>
                           </div>
@@ -376,7 +387,7 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
       ) : (
         false
       )}
-    </div>
+    </MainCartCss>
   );
 };
 export default CheckOut;

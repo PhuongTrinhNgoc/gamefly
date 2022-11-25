@@ -191,3 +191,13 @@ export const LoginCpn = styled.div`
     border-radius: 15px;
   }
 `;
+export const MainCartCss = styled.div`
+  .no-sus {
+    color: red;
+    font-size: 12px;
+  }
+  .sus {
+    color: green;
+    font-size: 12px;
+  }
+`;
