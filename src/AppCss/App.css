@@ -178,6 +178,13 @@
 
   /* padding-top: 25px; */
 }
+.main-category .blog-items {
+  text-decoration: none;
+  color: #000c;
+}
+.main-category .row .col3-hover:hover a div {
+  color: #2871c6;
+}
 .blog-items {
   text-decoration: none;
   color: #000c;
@@ -421,11 +428,12 @@
   margin-right: 30px;
 }
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  color: #fff !important;
+  color: black !important;
+
   opacity: 60% !important;
 }
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input label {
-  color: rgb(99, 94, 94) !important;
+  color: black !important;
   opacity: 60% !important;
 }
 /* rating */
@@ -469,7 +477,7 @@
   padding: 0 !important;
 }
 .navbar .user .login {
-  margin-right: 20px;
+  margin-right: 20px !important;
 }
 .container div .mainGameChild .slick-slider .slick-prev {
   top: -24px !important;
@@ -477,13 +485,4 @@
 }
 .container div .mainGameChild .slick-slider .slick-next {
   top: -24px !important;
-}
-.filter fieldset .css-igs3ac {
-  border-color: #fff;
-}
-.css-1bp1ao6.Mui-focused .MuiOutlinedInput-notchedOutline {
-  color: #fff !important;
-}
-.filter .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  color: #fff !important;
 }

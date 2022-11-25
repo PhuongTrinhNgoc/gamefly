@@ -8,7 +8,7 @@ const Self = () => {
       <MainSelf>
         <div className="child-self">
           <div className="title-self">
-            <Link to="cart">
+            <Link to="/cart">
               <ArrowBackIcon /> Back
             </Link>
             <h1>EPIC GAMES STORE REFUND POLICY</h1>

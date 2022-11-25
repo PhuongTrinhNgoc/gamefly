@@ -182,5 +182,12 @@ export const RotateOutDiv2 = styled.div`
   animation: 1.5s ${rotateOutAnimation};
 `;
 export const LoginCpn = styled.div`
-  margin-top: 70px;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  .main-login {
+    padding: 100px;
+    border: 1px solid gray;
+    border-radius: 15px;
+  }
 `;
