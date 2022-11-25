@@ -5,6 +5,7 @@ export const MainGame = styled.div`
   color: #fff;
   /* border: 1px solid; */
   padding: 0 48px;
+
   .img-Game {
     width: 100%;
   }
@@ -117,9 +118,12 @@ export const MainListItem = styled.div`
     overflow: hidden;
   }
   .filter {
-    color: #fff;
+    color: #fff !important;
     .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
       color: #fff !important;
+    }
+    .css-1bp1ao6 {
+      color: #fff;
     }
   }
   .btn-filter-pani {
