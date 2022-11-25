@@ -5,7 +5,6 @@ export const MainGame = styled.div`
   color: #fff;
   /* border: 1px solid; */
   padding: 0 48px;
-
   .img-Game {
     width: 100%;
   }
@@ -118,12 +117,9 @@ export const MainListItem = styled.div`
     overflow: hidden;
   }
   .filter {
-    color: #fff !important;
+    color: #fff;
     .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
       color: #fff !important;
-    }
-    .css-1bp1ao6 {
-      color: #fff;
     }
   }
   .btn-filter-pani {
@@ -161,11 +157,28 @@ export const MainListItem = styled.div`
   }
 `;
 export const ItemsPagiGame = styled.div`
+  .total-game {
+    display: flex;
+  }
+  .discount {
+    text-decoration: line-through;
+    opacity: 60%;
+  }
+  .sale-game {
+    position: Absolute;
+    top: 4px;
+    right: 4px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background: #2871c6;
+    color: yellow;
+  }
   img {
     width: 100%;
     border-radius: 15px;
   }
   .main-itemsPagiGame {
+    position: relative;
     padding-top: 10px;
     border-radius: 15px;
     margin-bottom: 4px;
