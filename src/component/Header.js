@@ -53,7 +53,6 @@ const Header = () => {
       });
     window.location.reload();
   };
-  console.log(current);
   // handle scroll event
   const elemenScroll = useRef();
   var scrollableElement = document.body;
@@ -97,28 +96,30 @@ const Header = () => {
         className={`navbar${sticky.isSticky ? " sticky" : ""} nav`}
       >
         <Logo className="logo">
-          <RotateInDiv
-            style={{
-              width: "100%",
-              position: "absolute",
-              top: "4px",
-              height: "94%",
-            }}
-          >
-            {" "}
-            <Img src={src2} />
-          </RotateInDiv>
-          <RotateOutDiv
-            style={{
-              width: "100%",
-              position: "absolute",
-              top: "4px",
-              height: "94%",
-            }}
-          >
-            {" "}
-            <Img src={src} />
-          </RotateOutDiv>
+          <Link to="/">
+            <RotateInDiv
+              style={{
+                width: "100%",
+                position: "absolute",
+                top: "4px",
+                height: "94%",
+              }}
+            >
+              {" "}
+              <Img src={src2} />
+            </RotateInDiv>
+            <RotateOutDiv
+              style={{
+                width: "100%",
+                position: "absolute",
+                top: "4px",
+                height: "94%",
+              }}
+            >
+              {" "}
+              <Img src={src} />
+            </RotateOutDiv>
+          </Link>
         </Logo>
         <ListMenu className="list-menu">
           <Link to="/" className="items-menu">

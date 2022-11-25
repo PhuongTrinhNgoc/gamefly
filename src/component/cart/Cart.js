@@ -12,10 +12,26 @@ import ButtonCpn from "./component/ButtonCpn";
 const Cart = () => {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.carts);
+
   const [open, setOpen] = useState(false);
+
+  const sumSalePrice =
+    cart.length > 0
+      ? cart.reduce((a, b) => {
+          return b.sale
+            ? a + (b.price - (b.price * b.sale) / 100)
+            : a + b.price;
+        }, 0)
+      : NaN;
+
   return (
     <MainCart>
-      <CheckOut open={open} setOpen={setOpen} cart={cart} />
+      <CheckOut
+        sumSalePrice={sumSalePrice}
+        open={open}
+        setOpen={setOpen}
+        cart={cart}
+      />
       <div className="container">
         <h2 className="main-my-cart">
           My Cart{" "}
@@ -80,13 +96,20 @@ const Cart = () => {
                               </Tooltip>
                             </div>
                           </div>
+                          {a.sale ? (
+                            <div className="">sale {a.sale} %</div>
+                          ) : (
+                            ""
+                          )}
                           <div className="info-dow">
                             <span className="info-icon">
                               {" "}
                               {a.window ? (
                                 <span className="span-icon-up">
                                   {" "}
-                                  <i class={"fa-brands " + `${a.window}`}></i>
+                                  <i
+                                    className={"fa-brands " + `${a.window}`}
+                                  ></i>
                                 </span>
                               ) : (
                                 " "
@@ -105,7 +128,27 @@ const Cart = () => {
                         </div>
                       </CartItem>
                       <div className="price-btn">
-                        <div>{a.price}$</div>
+                        <div>
+                          {a.sale ? (
+                            <div style={{ textDecoration: "line-through" }}>
+                              {a.price} $
+                            </div>
+                          ) : (
+                            <div>{a.price} $</div>
+                          )}
+                          <div className="total-game">
+                            <div style={{ marginLeft: "10px" }}>
+                              {a.sale ? (
+                                <div>
+                                  {a.price - (a.price * a.sale) / 100} $
+                                </div>
+                              ) : (
+                                ""
+                              )}{" "}
+                            </div>
+                          </div>
+                        </div>
+
                         <Button
                           className="remove-cart"
                           onClick={() => {
@@ -164,29 +207,33 @@ const Cart = () => {
                   <div className="d-flex price-cart">
                     <div> price</div>
                     <div>
-                      {cart.length > 0
-                        ? cart.reduce((a, b) => {
-                            return a + b.price;
-                          }, 0)
-                        : undefined}
-                      <span style={{ marginLeft: "10px" }}>$</span>
+                      {sumSalePrice === NaN ? "" : <div>{sumSalePrice} $</div>}
                     </div>
                   </div>
                   <div className="d-flex">
                     <div>Taxes</div>
-                    <div className="Calculated">Calculated at Checkout</div>
+                    <div className="Calculated">4 %</div>
                   </div>
+                  <div></div>
                   <div className="Subtotal d-flex">
                     <div>Subtotal</div>
                     <h5>
-                      {cart.length > 0
-                        ? cart.reduce((a, b) => {
-                            return a + b.price;
-                          }, 0)
-                        : undefined}
-                      <span style={{ marginLeft: "10px" }}>$</span>
+                      {sumSalePrice === NaN ? (
+                        ""
+                      ) : (
+                        <div>
+                          {sumSalePrice === NaN ? (
+                            ""
+                          ) : (
+                            <div>
+                              {sumSalePrice + (sumSalePrice * 4) / 100} $
+                            </div>
+                          )}{" "}
+                        </div>
+                      )}
                     </h5>
                   </div>
+
                   <ButtonCpn setOpen={setOpen} />
                 </div>
               </div>

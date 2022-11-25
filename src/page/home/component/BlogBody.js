@@ -22,7 +22,7 @@ const BlogBody = (props) => {
         {products &&
           products.blogs.map((item, key) => {
             return (
-              <Link to={`blogid/${item.id}`} key={key} className="blog-items">
+              <Link to={`blogs/${item.id}`} key={key} className="blog-items">
                 <ImgBlog src={item.img} />
                 <H5blog>{item.title}</H5blog>
                 <Pblog>{item.text}</Pblog>
