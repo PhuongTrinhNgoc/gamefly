@@ -9,22 +9,22 @@ import Game from "./page/game/Game";
 import Home from "./page/home/Home";
 import Layout from "./page/Layout";
 
+import { unwrapResult } from "@reduxjs/toolkit";
 import { initializeApp } from "firebase/app";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import Login from "./component/login/Login";
 import CreatAcc from "./component/login/CreatAcc";
+import Login from "./component/login/Login";
 import { getFectProdust } from "./redux/slice/producSlice";
-import { unwrapResult } from "@reduxjs/toolkit";
 // import productApi from 'api/productApi';
-import { getMe } from "./redux/slice/producSlice";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
-import ListItem from "./page/home/component/ListItem";
-import InfoGame from "./page/home/childComponent/InfoGame";
 import Cart from "./component/cart/Cart";
-import InfoBlog from "./page/blog/component/InfoBlog";
 import Self from "./component/cart/component/Self";
+import InfoBlog from "./page/blog/component/InfoBlog";
+import InfoGame from "./page/home/childComponent/InfoGame";
+import ListItem from "./page/home/component/ListItem";
+import { getMe } from "./redux/slice/producSlice";
 const config = {
   apiKey: "AIzaSyD6EqzVBTHfD5X8z0xqZ6OpWl3BAdETpmA",
   authDomain: "my-project-phuong-84bb6.firebaseapp.com",
@@ -74,7 +74,6 @@ function App() {
           <Route path="fqa" element={<FQA />} />
           <Route path="login" element={<Login />} />
           <Route path="login/CreatAcc" element={<CreatAcc />} />
-
           {/* <Route path="login" element={<User />} /> */}
           <Route path="infoGame/:id" element={<InfoGame />} />
           <Route path="infoGame/:id/cart" element={<Cart />} />
@@ -85,10 +84,9 @@ function App() {
           <Route path="game/infoGame/:id" element={<InfoGame />} />
           <Route path="cart/self" element={<Self />} />
           <Route path="cart/" element={<Cart />} />
-          <Route path="blogid/:id" element={<InfoBlog />} />
+          <Route path="blogs/:id" element={<InfoBlog />} />
           <Route path="listItem" element={<ListItem />} />
           <Route path="listItem/infoGame/:id/cart" element={<Cart />} />
-
           <Route path="listItem" element={<ListItem />} />
           <Route path="listItem/infoGame/:id" element={<InfoGame />} />
         </Route>

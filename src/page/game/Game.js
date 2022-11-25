@@ -1,13 +1,14 @@
-import { Box, Link, TextField } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { Box, TextField } from "@mui/material";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { ItemsFilter, MainGame, MainListItem } from "../../css/cssGame";
-import { getFectProdustGame } from "../../redux/slice/producSlice";
 import GameGenres from "./component/GameGenres";
 import GameList from "./component/GameList";
 
 const Game = () => {
   const [valueInput, setValueInput] = useState("");
+  const [reload, setReload] = useState("");
   const { products } = useSelector((state) => state.products);
 
   // const { productsGame } = useSelector((state) => state.products);
@@ -31,7 +32,7 @@ const Game = () => {
           <div className="row">
             <div className="col-9">
               <div className="row">
-                <GameList />
+                <GameList setReload={setReload} />
               </div>
             </div>
             <div className="col-3">
@@ -71,13 +72,17 @@ const Game = () => {
                   <ItemsFilter>
                     <div className="box-filter">
                       <ul>
-                        {dataFilter.map((a, b) => {
+                        {dataFilter.map((item, index) => {
+                          console.log(item);
                           return (
-                            <Link to={`infoGame/${a._id}`}>
+                            <Link key={index} to={`infoGame/${item._id}`}>
                               <li>
                                 {" "}
-                                <img className="img-filter" src={a.imgItem} />
-                                {a.name}
+                                <img
+                                  className="img-filter"
+                                  src={item.imgItem}
+                                />
+                                {item.name}
                               </li>
                             </Link>
                           );

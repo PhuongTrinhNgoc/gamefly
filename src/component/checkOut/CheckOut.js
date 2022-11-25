@@ -2,21 +2,21 @@ import {
   Button,
   FormControl,
   FormControlLabel,
-  FormLabel,
   Radio,
   RadioGroup,
-  TextField,
 } from "@mui/material";
-import React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import React, { useState } from "react";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
-const CheckOut = ({ open, cart, setOpen }) => {
+const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
+  const [valueInputCode, setValueInputCode] = useState("");
+
+  const SALECODE = "gamefly";
   const [expanded, setExpanded] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState("");
   //   const [bank, setBank] = React.useState("");
@@ -27,12 +27,7 @@ const CheckOut = ({ open, cart, setOpen }) => {
   const handleChangeCheck = (event) => {
     setSelectedValue(event.target.value);
   };
-  const tatalAll =
-    cart.length > 0
-      ? cart.reduce((a, b) => {
-          return a + b.price;
-        }, 0)
-      : undefined;
+
   return (
     <div className="">
       {" "}
@@ -283,25 +278,58 @@ const CheckOut = ({ open, cart, setOpen }) => {
                           <div className="d-flex price-cart ">
                             <div> price</div>
                             <div>
-                              {cart.length > 0
-                                ? cart.reduce((a, b) => {
-                                    return a + b.price;
-                                  }, 0)
-                                : undefined}
+                              {sumSalePrice}
                               <span style={{ marginLeft: "10px" }}>$</span>
                             </div>
                           </div>
                           <div className="d-flex">
                             <div>Sale Discount</div>
-                            <div>no</div>
+                            {/*  */}
+                            <div>
+                              {valueInputCode === SALECODE ? "- 20 $" : 0}
+                            </div>
+                          </div>
+                          <div className="main-total">
+                            <div className="input-sale">
+                              <div className="submmit-total">submmit</div>
+                              <input
+                                value={valueInputCode}
+                                onChange={(e) => {
+                                  setValueInputCode(e.target.value);
+                                }}
+                                placeholder="Enter a creator tag"
+                              />
+                            </div>
+                            <div>
+                              {valueInputCode === SALECODE ? (
+                                <div>sussise</div>
+                              ) : (
+                                <div>* sussise</div>
+                              )}
+                            </div>
                           </div>
                         </div>
 
                         <div className="total-checkout d-flex">
                           <h6>Total</h6>
                           <h5>
-                            {tatalAll}
-                            <span style={{ marginLeft: "10px" }}>$</span>
+                            {sumSalePrice === NaN ? (
+                              ""
+                            ) : (
+                              <div>
+                                {valueInputCode === SALECODE
+                                  ? (
+                                      sumSalePrice +
+                                      (sumSalePrice * 4) / 100 -
+                                      20
+                                    ).toFixed(2)
+                                  : (
+                                      sumSalePrice +
+                                      (sumSalePrice * 4) / 100
+                                    ).toFixed(2)}{" "}
+                                $
+                              </div>
+                            )}
                           </h5>
                         </div>
                       </div>
@@ -310,13 +338,32 @@ const CheckOut = ({ open, cart, setOpen }) => {
                         <div>Payment Details:</div>
                         <div className="payment-bank">
                           <div>{selectedValue}</div>
-                          <div>$ {tatalAll}</div>
-                        </div>
-                      </div>
-
-                      <div className="main-total">
-                        <div className="input-sale">
-                          <input placeholder="Enter a creator tag" />
+                          <div>
+                            {" "}
+                            {sumSalePrice === NaN ? (
+                              ""
+                            ) : (
+                              <div>
+                                {sumSalePrice === NaN ? (
+                                  ""
+                                ) : (
+                                  <div>
+                                    {valueInputCode === SALECODE
+                                      ? (
+                                          sumSalePrice +
+                                          (sumSalePrice * 4) / 100 -
+                                          20
+                                        ).toFixed(2)
+                                      : (
+                                          sumSalePrice +
+                                          (sumSalePrice * 4) / 100
+                                        ).toFixed(2)}
+                                    $
+                                  </div>
+                                )}
+                              </div>
+                            )}{" "}
+                          </div>
                         </div>
                       </div>
                     </div>

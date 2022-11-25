@@ -69,9 +69,9 @@ const CreatAcc = () => {
           </Button>
           <div style={{ textAlign: "start" }}>
             {" "}
-            <Link style={{ textDecoration: "none" }} to="/">
+            <Link style={{ textDecoration: "none" }} to="/login">
               <i className="fa-solid fa-arrow-left-long"></i>{" "}
-              <span style={{ marginLeft: "10px" }}> Back Home</span>
+              <span style={{ marginLeft: "10px" }}> Back</span>
             </Link>
           </div>
         </Box>

@@ -227,19 +227,19 @@
   ],
   "gamefree": [
     {
-      "id": 1,
+      "id": 8,
       "img": "/imgFreeGame/imgFree1.png",
       "name": "Filament",
       "freenow": "Free Now - Nov 10 at 11:00 PM"
     },
     {
-      "id": 2,
+      "id": 17,
       "img": "/imgFreeGame/imgFree2.png",
       "name": "Rising Storm 2: Vietnam",
       "freenow": "Free Now - Nov 10 at 11:00 PM"
     },
     {
-      "id": 3,
+      "id": 25,
       "img": "/imgFreeGame/imgFree3.png",
       "name": "Alba - A Wildlife Adventure",
       "freenow": "Free Nov 10 - Nov 17"
@@ -259,6 +259,7 @@
       "mac": "fa-apple",
       "base": "BASE GAME",
       "name": "ending ring",
+      "sale": 10,
       "imgItem": "/images/endingring.png",
       "price": 130,
       "year": "25/02/2022",
@@ -422,6 +423,8 @@
       "window": "fa-windows",
       "edit": "EDITION",
       "name": "Stray",
+      "sale": 10,
+
       "imgItem": "/images/stray.png",
       "price": 70,
       "year": "19/7/2022",
@@ -541,6 +544,7 @@
       "category": "action",
       "_id": 5,
       "window": "fa-windows",
+      "sale": 6,
       "edit": "EDITION",
       "name": "UNCHARTED™: Legacy of Thieves Collection",
       "imgItem": "/images/uncharted.png",
@@ -671,6 +675,7 @@
       "base": "BASE GAME",
       "name": "Dying Light 2 Stay Human",
       "imgItem": "/images/dying.png",
+      "sale": 5,
       "price": 85,
       "year": "4/2/2022",
       "player": 1,
@@ -793,6 +798,7 @@
       "category": "action",
       "_id": 9,
       "window": "fa-windows",
+      "sale": 8,
 
       "edit": "EDITION",
       "name": "Ghostwire: Tokyo",
@@ -923,6 +929,7 @@
       "category": "action",
       "_id": 11,
       "window": "fa-windows",
+      "sale": 12,
 
       "edit": "EDITION",
       "name": "Saints Row",
@@ -1069,6 +1076,7 @@
     },
     {
       "category": "Simulation",
+      "sale": 10,
       "_id": 13,
       "window": "fa-windows",
       "edit": "EDITION",
@@ -1217,7 +1225,8 @@
     },
     {
       "category": "Simulation",
-      "_id": 15,
+      "sale": 10,
+      "_id": 5,
       "window": "fa-windows",
       "edit": "EDITION",
       "base": "BASE GAME",
@@ -1364,6 +1373,7 @@
       "category": "Simulation",
       "_id": 17,
       "window": "fa-windows",
+      "sale": 12,
 
       "edit": "EDITION",
       "name": "Rising Storm 2: Vietnam",
@@ -1581,6 +1591,7 @@
     {
       "category": "Sports-Racing",
       "_id": 20,
+      "sale": 3,
 
       "mac": "fa-apple",
       "base": "BASE GAME",
@@ -1797,7 +1808,8 @@
     },
     {
       "category": "Simulation",
-      "_id": 23,
+      "sale": 10,
+      "_id": 6,
       "window": "fa-windows",
       "edit": "EDITION",
       "name": "Apex Legends™ PS5™ ",
@@ -1924,9 +1936,10 @@
       "category": "Sports-Racing",
       "_id": 25,
       "window": "fa-windows",
+      "sale": 7,
 
       "edit": "EDITION",
-      "name": "Soul Hackers 2",
+      "name": "Alba - A Wildlife Adventure",
       "imgItem": "/images/soul.png",
       "price": 70,
       "year": "2/2/2022",
@@ -1935,8 +1948,8 @@
       "imgFQA": "/imgInfoGame/FQAimageHorizon.png",
       "warring": "Players who purchase the PlayStation®4 version can upgrade for free to the PlayStation®5 version. Please note that players who purchase the physical disc version of the game cannot upgrade on t he PS5™ Digital Edition, as it does not have a disc drive. Players who purchase the digital version for PS5™ on the PlayStation™Store can also download the PS4™ at no additional cost. In all cases, registration to the PlayStation™Network , sufficient storage space, and a fast internet connection (including data transfer fees) are required.",
       "detail": {
-        "nameGame": "Soul Hackers 2",
-        "title": "Soul Hackers 2™(English)",
+        "nameGame": "Alba - A Wildlife Adventure",
+        "title": "Alba - A Wildlife Adventure™(English)",
         "replaceVideo": "/imgSoulHackers/baner.png",
         "baner": "/imgSoulHackers/baner2.png",
         "tabInfo": "/imgSoulHackers/tabHorizzon.png",
@@ -2047,6 +2060,7 @@
       "category": "Adventure",
       "_id": 27,
       "window": "fa-windows",
+      "sale": 12,
 
       "edit": "EDITION",
       "base": "BASE GAME",
@@ -2231,7 +2245,8 @@
     },
     {
       "category": "Adventure",
-      "_id": 30,
+      "sale": 10,
+      "_id": 5,
       "base": "BASE GAME",
       "edit": "EDITION",
       "name": "Far Cry 6",
@@ -2420,6 +2435,7 @@
       "category": "Strategy",
       "_id": 33,
       "window": "fa-windows",
+      "sale": 10,
 
       "edit": "EDITION",
       "base": "BASE GAME",
@@ -2543,6 +2559,8 @@
     {
       "category": "Strategy",
       "_id": 35,
+      "sale": 8,
+
       "base": "BASE GAME",
       "edit": "EDITION",
       "name": "VALKYRIE ELYSIUM",

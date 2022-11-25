@@ -53,7 +53,6 @@ const Header = () => {
       });
     window.location.reload();
   };
-  console.log(current);
   // handle scroll event
   const elemenScroll = useRef();
   var scrollableElement = document.body;

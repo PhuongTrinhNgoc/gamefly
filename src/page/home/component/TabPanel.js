@@ -83,28 +83,26 @@ export default function BasicTabs() {
   return (
     <div className="main-category">
       <h1>Category</h1>
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottsom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            {products &&
-              products.category.map((item, index) => {
-                return (
-                  <Tab
-                    key={index}
-                    onClick={() => {
-                      setListCateroly(item);
-                    }}
-                    label={item}
-                    {...a11yProps(index)}
-                  />
-                );
-              })}
-          </Tabs>
-        </Box>
+      <Box sx={{ borderBottsom: 1, borderColor: "divider", width: "100%" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          {products &&
+            products.category.map((item, index) => {
+              return (
+                <Tab
+                  key={index}
+                  onClick={() => {
+                    setListCateroly(item);
+                  }}
+                  label={item}
+                  {...a11yProps(index)}
+                />
+              );
+            })}
+        </Tabs>
       </Box>
 
       <div className="row">
