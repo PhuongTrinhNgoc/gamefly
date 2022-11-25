@@ -150,9 +150,11 @@ export default function App() {
               <p>
                 <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
               </p>
-              <ThemeProvider theme={theme}>
-                <Chip icon={<MdPhone />} label="Call me :  + 01 234 567 88" />
-              </ThemeProvider>{" "}
+              <p>
+                <ThemeProvider theme={theme}>
+                  <Chip icon={<MdPhone />} label="Call me :  + 01 234 567 88" />
+                </ThemeProvider>{" "}
+              </p>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

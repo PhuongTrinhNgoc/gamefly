@@ -8,7 +8,7 @@ import { BodyItem } from "../../../css/cssHome";
 import { getItemsCart } from "../../../redux/slice/producSlice";
 
 import ListItemsChild from "./ListItemsChild";
-const ItemMain = ({ setOpen }) => {
+const ItemMain = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getItemsCart());
@@ -65,7 +65,7 @@ const ItemMain = ({ setOpen }) => {
             itemsCart.items.map((items, index) => {
               return (
                 <div key={index} className="main-card">
-                  <ListItemsChild items={items} setOpen={setOpen} />
+                  <ListItemsChild items={items} />
                 </div>
               );
             })}

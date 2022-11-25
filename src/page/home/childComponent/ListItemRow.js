@@ -11,13 +11,15 @@ const ListItemRow = ({ products }) => {
         <h5>New Releases</h5>
         {products.listItems1?.map((item, index) => {
           return (
-            <Link to={`infoGame/${item._id}`} className="rowItem" key={index}>
-              <img src={item.img} />
-              <div>
-                {" "}
-                <h6>{item.name}</h6>
-              </div>
-            </Link>
+            <>
+              <Link to={`infoGame/${item._id}`} className="rowItem" key={index}>
+                <img src={item.img} />
+                <div>
+                  {" "}
+                  <h6>{item.name}</h6>
+                </div>
+              </Link>
+            </>
           );
         })}
       </div>

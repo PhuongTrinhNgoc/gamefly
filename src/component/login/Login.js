@@ -1,19 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { LoginCpn } from "../../css/cssComponent";
 
 import firebase from "firebase/compat/app";
+import {
+  getAuth,
+  signOut,
+  GoogleAuthProvider,
+  getRedirectResult,
+} from "firebase/auth";
 import "firebaseui/dist/firebaseui.css";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import {
-  Img,
-  LoginCpn,
-  Logo,
-  RotateInDiv,
-  RotateInDiv2,
-  RotateOutDiv,
-} from "../../css/cssLogin";
-import { Autocomplete, Button, ButtonBase, TextField } from "@mui/material";
-import { Box, Stack } from "@mui/system";
 const uiConfig = {
   signInFlow: "redirect",
   signInSuccessUrl: "/",
@@ -24,69 +20,10 @@ const uiConfig = {
 };
 
 const Login = () => {
-  const src = "../images/avatar.png";
-  const src2 = "../images/avatar2.png";
-
   return (
     <LoginCpn className="loging">
-      <div className="main-login">
-        <Logo className="logo">
-          <RotateInDiv2
-            style={{
-              width: "30%",
-              position: "absolute",
-              top: "4px",
-              height: "100%",
-            }}
-          >
-            {" "}
-            <Img src={src2} />
-          </RotateInDiv2>
-          <RotateOutDiv
-            style={{
-              width: "30%",
-              position: "absolute",
-              top: "4px",
-              height: "100%",
-            }}
-          >
-            {" "}
-            <Img src={src} />
-          </RotateOutDiv>
-        </Logo>
-        <h4>Login GameFly</h4>
-        <Box
-          sx={{
-            width: "100%",
-          }}
-        >
-          <TextField id="demo-helper-text-misaligned" label="Name" />
-          <TextField id="demo-helper-text-misaligned" label="Pass" />
-          <Button className="btn-login" variant="contained">
-            Login
-          </Button>
-          <div class="loginSignUpSeparator ">
-            <span class="textInSeparator">or</span>
-          </div>
-
-          <Link to="CreatAcc">
-            <Button className="btn-creat" variant="outlined">
-              creat account
-            </Button>
-          </Link>
-          <div style={{ textAlign: "start" }}>
-            {" "}
-            <Link style={{ textDecoration: "none" }} to="/">
-              <i className="fa-solid fa-arrow-left-long"></i>{" "}
-              <span style={{ marginLeft: "10px" }}> Back Home</span>
-            </Link>
-          </div>
-        </Box>
-        <StyledFirebaseAuth
-          uiConfig={uiConfig}
-          firebaseAuth={firebase.auth()}
-        />
-      </div>
+      Login
+      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
     </LoginCpn>
   );
 };

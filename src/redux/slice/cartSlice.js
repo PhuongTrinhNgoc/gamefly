@@ -5,7 +5,6 @@ import { Stack } from "react-bootstrap";
 const initialState = {
   cart: [],
   load: false,
-  buy: [],
 };
 const cartSlice = createSlice({
   name: "cart",
@@ -31,15 +30,8 @@ const cartSlice = createSlice({
 
       //   return { cart: [...newListCart] };
     },
-    buyItem: (state = initialState, action) => {
-      const itemFind = state.buy.find((p) => p._id === action.payload._id);
-
-      if (!itemFind) {
-        return { buy: [...state.cart, action.payload] };
-      } else return state;
-    },
   },
 });
 
-export const { addToCart, deleteCart, buyItem } = cartSlice.actions;
+export const { addToCart, deleteCart } = cartSlice.actions;
 export default cartSlice.reducer;

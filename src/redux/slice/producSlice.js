@@ -88,6 +88,7 @@ export const getBlogById = createAsyncThunk(
       const responsive = await axios.get(
         `https://my-project-phuong-84bb6-default-rtdb.firebaseio.com/blogs.json?orderBy="id"&equalTo=${itemBlogId}`
       );
+      console.log(responsive.data);
       const myArr2 = [];
 
       for (let newItem in responsive.data) {
@@ -127,6 +128,7 @@ export const getPaginationGame = createAsyncThunk(
       );
 
       const myArr2 = [];
+
       for (let newItem in responsive.data) {
         myArr2.push(responsive.data[newItem]);
       }

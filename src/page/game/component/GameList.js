@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ItemsPagiGame } from "../../../css/cssGame";
 import { getPaginationGame } from "../../../redux/slice/producSlice";
 
-const GameList = ({ setReload }) => {
+const GameList = () => {
   const [value, setValue] = useState("&startAt=0&endAt=17");
   const [focus, setFocus] = useState(1);
 
@@ -14,58 +14,23 @@ const GameList = ({ setReload }) => {
     dispatch(getPaginationGame(value));
   }, [value]);
   const { itemsPagiGame } = useSelector((state) => state.products);
-
   const { products } = useSelector((state) => state.products);
-  const handleChangeSort = (e) => {
-    const value = e.target.value;
 
-    if (value == 1) {
-      console.log(" chay");
-    } else if (value == 2) {
-      // setNewArr2(newArr);
-      // setReload(value);
-      // return [...itemsPagiGame].sort(
-      //   (a, b) => Number(b.price) - Number(a.price)
-      // );
-    } else console.log("khong chay");
-  };
+  console.log(products.panigation2);
+  const handleClickPaniGame = ({ item }) => {};
   return (
     <ItemsPagiGame>
       <div className="row">
         {itemsPagiGame &&
           itemsPagiGame.map((item, index) => {
-            console.log(item);
             return (
               <div key={index} className="col-3 main-itemsPagiGame">
                 <Link to={`infoGame/${item._id}`}>
                   <img src={item.imgItem} />
                   <div className="title-itemsPagiGame">
                     <div>{item.name}</div>
-                    <div className="total-game">
-                      <div>
-                        {item.sale ? (
-                          <div className="discount">{item.price} $</div>
-                        ) : (
-                          <div>{item.price} $</div>
-                        )}
-                      </div>
 
-                      <div style={{ marginLeft: "10px" }}>
-                        {item.sale ? (
-                          <div>
-                            <span style={{ marginRight: "10px" }}>-</span>
-                            {item.price - (item.price * item.sale) / 100} $
-                          </div>
-                        ) : (
-                          ""
-                        )}{" "}
-                      </div>
-                    </div>{" "}
-                    {item.sale ? (
-                      <div className="sale-game">sale {item.sale} %</div>
-                    ) : (
-                      ""
-                    )}
+                    <div>$ {item.price}</div>
                   </div>
                 </Link>
               </div>

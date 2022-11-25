@@ -10,7 +10,7 @@ export const MainGame = styled.div`
   }
   .slick-slider .slick-prev:before,
   .slick-slider .slick-next:before {
-    color: #fff !important;
+    color: black !important;
   }
   .slick-slider .slick-list .slick-track {
   }
@@ -24,17 +24,14 @@ export const MainGameChild = styled.div`
   background: #171717;
   padding: 20px;
   border-radius: 15px;
-  margin-bottom: 50px;
-  .slick-next {
-    top: 0 !important;
-  }
   img {
     width: 100%;
     border-radius: 15px;
   }
+
   .container div .slick-slider .slick-prev:before,
   .container div .slick-slider .slick-next:before {
-    color: #fff !important;
+    color: black !important;
   }
 
   .pa {
@@ -62,14 +59,20 @@ export const MainGameChild = styled.div`
   }
 `;
 export const ItemsFilter = styled.div`
+  background: black;
   max-height: 435px;
+  width: 299px;
+
   object-fit: cover;
   overflow: hidden;
   overflow-y: scroll;
-  background: #1f1f1f;
-  margin-top: 10px;
+  /* background: #1f1f1f; */
+  margin-top: 16px;
+  padding-right: 10px;
   color: #fff;
-
+  z-index: 10000000;
+  z-index: 10000000;
+  position: fixed;
   ul {
     padding: 0;
   }
@@ -106,7 +109,7 @@ export const MainListItem = styled.div`
   .main-content-pagination {
     height: 290px;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 16px;
     color: #fff;
   }
   .name-pani {
@@ -117,9 +120,23 @@ export const MainListItem = styled.div`
     overflow: hidden;
   }
   .filter {
-    color: #fff;
+    /* color: #fff; */
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+      border-color: #212529 !important;
+    }
     .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
-      color: #fff !important;
+      color: black;
+    }
+    input {
+      width: 100%;
+      padding: 6px;
+      border-radius: 10px;
+      outline: none;
+      /* border: none; */
+      border-radius: 15px;
+      /* background: gray; */
+      border: 0.5px solid;
+      transition: 0.8s;
     }
   }
   .btn-filter-pani {
@@ -141,52 +158,18 @@ export const MainListItem = styled.div`
     height: 30px;
     padding: 10px;
     position: absolute;
-    top: 25%;
+    top: 10%;
     right: 5%;
     outline: none;
     border: 1px solid transparent;
     background: none;
-    color: #fff;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     :hover {
-      border: 1px solid #fff;
+      border: 1px solid black;
       border-radius: 100%;
-    }
-  }
-`;
-export const ItemsPagiGame = styled.div`
-  img {
-    width: 100%;
-    border-radius: 15px;
-  }
-  .main-itemsPagiGame {
-    padding-top: 10px;
-    border-radius: 15px;
-    margin-bottom: 4px;
-    height: 305px;
-    :hover a {
-      color: #2871c6;
-    }
-    :hover {
-      background: rgba(225, 225, 225, 0.18);
-    }
-
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
-    .title-itemsPagiGame {
-      margin-top: 10px;
-    }
-  }
-  .main-btn-itemsPagiGame {
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    button {
-      margin-left: 10px;
     }
   }
 `;

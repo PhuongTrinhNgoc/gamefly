@@ -182,22 +182,5 @@ export const RotateOutDiv2 = styled.div`
   animation: 1.5s ${rotateOutAnimation};
 `;
 export const LoginCpn = styled.div`
-  padding-top: 70px;
-  display: flex;
-  justify-content: center;
-  .main-login {
-    padding: 100px;
-    border: 1px solid gray;
-    border-radius: 15px;
-  }
-`;
-export const MainCartCss = styled.div`
-  .no-sus {
-    color: red;
-    font-size: 12px;
-  }
-  .sus {
-    color: green;
-    font-size: 12px;
-  }
+  margin-top: 70px;
 `;

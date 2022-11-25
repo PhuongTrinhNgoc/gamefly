@@ -1,23 +1,28 @@
-import { Button } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {
+  BodyItem,
+  Img,
+  ItemsPadding,
+  ImgHoverItem,
+  DivNone,
+} from "../../../css/cssHome";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import "../../../../node_modules/slick-carousel/slick/slick.css";
-import { DivNone, ImgHoverItem, ItemsPadding } from "../../../css/cssHome";
 
-import { useSnackbar } from "notistack";
+import "../../../../node_modules/slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Button from "@mui/material/Button";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useSelector, useDispatch } from "react-redux";
+
 import { addToCart } from "../../../redux/slice/cartSlice";
-import { buyItem } from "../../../redux/slice/buySlice";
+import { useSnackbar } from "notistack";
 
 const ListItemsChild = (props) => {
-  //   const [bank, setBank] = React.useState("");
-
   const [addedCart, setaddedCart] = useState(false);
-  const { items, setOpen } = props;
+  const { items } = props;
   const { enqueueSnackbar } = useSnackbar();
+
   const dispatch = useDispatch();
   const theme = createTheme({
     palette: {
@@ -27,7 +32,6 @@ const ListItemsChild = (props) => {
       },
     },
   });
-
   const handleClickVariant = (variant, items) => () => {
     dispatch(addToCart(items));
     setaddedCart(true);
@@ -50,11 +54,6 @@ const ListItemsChild = (props) => {
             style={{ marginRight: "2px" }}
             variant="contained"
             size="small"
-            onClick={() => {
-              setOpen(true);
-              console.log("dsa");
-              dispatch(buyItem(items));
-            }}
           >
             buy
           </Button>

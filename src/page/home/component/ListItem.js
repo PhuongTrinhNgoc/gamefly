@@ -22,12 +22,18 @@ const ListItem = () => {
 
   // const [valueArr, setValueArr] = useState([]);
 
+  const arr = [
+    { name: "Hight to Low", id: 1 },
+    { name: "Low to Hight", id: 2 },
+    { name: "YEAR", id: 3 },
+  ];
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPagination(cutListItem));
   }, [cutListItem]);
   const { products } = useSelector((state) => state.products);
-  const [open, setOpen] = useState(true);
+  // const [sortItems, setSortItems] = useState(itemsPaginations);
 
   console.log(products);
   const handleclick = (item, index) => {
@@ -63,6 +69,18 @@ const ListItem = () => {
       <div className="container">
         <div className="row">
           <div className="col-9">
+            <select onChange={handleChangeSortItem}>
+              <option>chọn</option>
+
+              {arr.map((item, index) => {
+                return (
+                  <option value={item.id} key={index}>
+                    {item.name}
+                  </option>
+                );
+              })}
+            </select>
+
             <div className="row">
               {itemsPaginations &&
                 itemsPaginations?.map((item, index) => {
