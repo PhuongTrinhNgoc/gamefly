@@ -932,10 +932,16 @@ export const ItemsFilter = styled.div`
   }
 `;
 export const CommentInfoGame = styled.div`
-  background: #000c00;
+  background: #000c;
   color: #fff;
+  padding: 20px 0;
+  .input-warring {
+    color: red;
+    font-size: 12px;
+  }
   .input-info {
-    width: 30%;
+    width: 50%;
+    display: flex;
   }
   .title-comment {
     display: flex;
@@ -961,6 +967,19 @@ export const CommentInfoGame = styled.div`
   }
   .link-grey {
     margin-right: 10px;
+  }
+  .css-1yjjitx-MuiSwitch-track {
+    background-color: #2871c6;
+  }
+  .body-comment {
+    transition: 1.2s;
+  }
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    color: #fff !important;
+    opacity: 100% !important;
+  }
+  .btn-sumitComment {
+    margin-left: 10px;
   }
 `;
 

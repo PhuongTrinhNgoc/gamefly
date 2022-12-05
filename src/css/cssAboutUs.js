@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AboutUsCpn = styled.div`
   padding: 50px 0;
-  margin-top: 70px;
+  padding-top: 70px;
   .body-about {
     margin: 30px 0;
   }

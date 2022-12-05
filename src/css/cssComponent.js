@@ -138,12 +138,18 @@ export const ListMenu = styled.div`
     text-decoration: none;
     font-weight: 600;
     color: #000c;
+    border-bottom: 1px solid transparent;
   }
-  &.list-menu a:hover {
-    /* border-bottom: 1px solid #0d6efd; */
+  .items-menu {
+    :hover {
+      border-bottom: 1px solid #2871c6;
+    }
+  }
+  /* &.list-menu a:hover {
+
     color: #4097fd;
     border-radius: 10px;
-  }
+  } */
 `;
 
 export const ItemMenu = styled.div``;
