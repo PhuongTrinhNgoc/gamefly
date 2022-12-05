@@ -223,9 +223,22 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
                       </AccordionSummary>
                       <AccordionDetails>
                         <Typography>
-                          Donec placerat, lectus sed mattis semper, neque lectus
-                          feugiat lectus, varius pulvinar diam eros in elit.
-                          Pellentesque convallis laoreet laoreet.
+                          <div className="save">
+                            <div>
+                              <p className="p-credit">
+                                By choosing to save your payment information,
+                                this payment method will be selected as the
+                                default for all purchases made using Epic Games
+                                payment, including purchases in Fortnite, Rocket
+                                League, Fall Guys and the Epic Games Store. You
+                                can delete your saved payment information
+                                anytime on this payment screen or by logging in
+                                to your Epic Games account, and selecting
+                                payment management in your account settings.
+                                <Link> Learn more.</Link>
+                              </p>
+                            </div>
+                          </div>
                         </Typography>
                       </AccordionDetails>
                     </Accordion>
@@ -300,13 +313,27 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
                                 placeholder="Enter a creator tag"
                               />
                             </div>
-                            <div>
-                              {valueInputCode === SALECODE ? (
-                                <div>sussise</div>
-                              ) : (
-                                <div>* sussise</div>
-                              )}
-                            </div>
+                            {valueInputCode.length === 0 ? (
+                              <div style={{ fontSize: "12px" }}>
+                                enter discount code (if any)
+                              </div>
+                            ) : (
+                              <div>
+                                {valueInputCode === SALECODE ? (
+                                  <div
+                                    style={{ color: "green", fontSize: "12px" }}
+                                  >
+                                    * apply discount code
+                                  </div>
+                                ) : (
+                                  <div
+                                    style={{ color: "red", fontSize: "12px" }}
+                                  >
+                                    * discount code is not correct
+                                  </div>
+                                )}
+                              </div>
+                            )}
                           </div>
                         </div>
 

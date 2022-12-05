@@ -19,17 +19,29 @@ import {
   RotateOutDiv,
 } from "../css/cssComponent";
 import { Box, TextField } from "@mui/material";
-
+import { removeVietnameseTones } from "../removeTones/removeVietnameseTones";
 const Header = () => {
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
   const [showInput, setShowInput] = useState(false);
   const [valueInput, setValueInput] = useState("");
+  const [focus, setFocus] = useState(1);
 
   const { cart } = useSelector((state) => state.carts);
   const { current } = useSelector((state) => state.products);
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { products } = useSelector((state) => state.products);
+
+  const listNavbar = [
+    {
+      linkTo: "/",
+      name: "Home",
+    },
+    { linkTo: "game", name: "Game" },
+    { linkTo: "blogs", name: "Blogs" },
+    { linkTo: "aboutus", name: "About Us" },
+    { linkTo: "fqa", name: "FQA" },
+  ];
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -41,6 +53,7 @@ const Header = () => {
   const handleOnchange = (e) => {
     setValueInput(e.target.value);
   };
+
   const handleClose = () => {
     const auth = getAuth();
 
@@ -84,7 +97,12 @@ const Header = () => {
   if (products === 0) return <h1>loading...</h1>;
 
   const dataFilter =
-    products.items && products.items.filter((a) => a.name.includes(valueInput));
+    products.items &&
+    products.items.filter((a) =>
+      removeVietnameseTones(a.name.toLocaleLowerCase()).includes(
+        valueInput.toLocaleLowerCase()
+      )
+    );
   const handleClose2 = () => {
     setAnchorEl(null);
   };
@@ -122,25 +140,26 @@ const Header = () => {
           </Link>
         </Logo>
         <ListMenu className="list-menu">
-          <Link to="/" className="items-menu">
-            Home
-          </Link>
-
-          <Link to="game" className="items-menu">
-            Game
-          </Link>
-
-          <Link to="blogs" className="items-menu">
-            Blogs
-          </Link>
-
-          <Link to="aboutus" className="items-menu">
-            About Us
-          </Link>
-
-          <Link to="fqa" className="items-menu">
-            FQA
-          </Link>
+          {listNavbar.map((a, b) => {
+            return (
+              <Link
+                key={b}
+                onClick={() => {
+                  console.log(b);
+                  setFocus(b + 1);
+                }}
+                style={
+                  focus === b + 1
+                    ? { color: "#2871c6", borderBottom: "1px solid #2871c6" }
+                    : { color: "black" }
+                }
+                className="items-menu"
+                to={a.linkTo}
+              >
+                {a.name}
+              </Link>
+            );
+          })}
         </ListMenu>
 
         <DflexAll className="user">

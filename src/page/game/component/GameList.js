@@ -34,7 +34,6 @@ const GameList = ({ setReload }) => {
       <div className="row">
         {itemsPagiGame &&
           itemsPagiGame.map((item, index) => {
-            console.log(item);
             return (
               <div key={index} className="col-3 main-itemsPagiGame">
                 <Link to={`infoGame/${item._id}`}>
@@ -46,7 +45,7 @@ const GameList = ({ setReload }) => {
                         {item.sale ? (
                           <div className="discount">{item.price} $</div>
                         ) : (
-                          <div>{item.price} $</div>
+                          <div>$ {item.price}</div>
                         )}
                       </div>
 
