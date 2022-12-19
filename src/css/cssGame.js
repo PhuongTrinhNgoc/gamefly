@@ -95,6 +95,15 @@ export const ItemsFilter = styled.div`
       color: #000c;
     }
   }
+  #fullWidth {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 4px;
+    background: black;
+    color: #fff;
+  }
 `;
 export const MainListItem = styled.div`
   /* margin-top: 70px; */
@@ -121,6 +130,15 @@ export const MainListItem = styled.div`
     .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
       color: #fff !important;
     }
+    div input {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border: 1px solid white;
+      border-radius: 4px;
+      background: black;
+      color: #fff;
+    }
   }
   .btn-filter-pani {
     position: absolute;
@@ -141,8 +159,8 @@ export const MainListItem = styled.div`
     height: 30px;
     padding: 10px;
     position: absolute;
-    top: 25%;
-    right: 5%;
+    top: 17%;
+    right: 4%;
     outline: none;
     border: 1px solid transparent;
     background: none;

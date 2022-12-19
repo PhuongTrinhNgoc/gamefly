@@ -2250,6 +2250,7 @@
       "base": "BASE GAME",
       "edit": "EDITION",
       "name": "Far Cry 6",
+      "window": "fa-windows",
       "imgItem": "/images/farcry.png",
       "price": 50,
       "year": "8/2/2022",

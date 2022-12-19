@@ -587,6 +587,7 @@ export const MainCart = styled.div`
     height: 180px;
 
     .name-price {
+      margin-left: 30px;
       .h6-price {
         color: #141412b8;
       }
@@ -852,6 +853,15 @@ export const MainListItem = styled.div`
   .filter {
     color: #fff;
     margin-top: 20px;
+    div input {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border: 1px solid white;
+      border-radius: 4px;
+      background: black;
+      color: #fff;
+    }
   }
   .btn-filter-pani {
     position: absolute;
