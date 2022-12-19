@@ -123,7 +123,7 @@ const Cart = () => {
                               )}
                             </span>
 
-                            <i class="fa-brands "></i>
+                            <i className="fa-brands "></i>
                           </div>
                         </div>
                       </CartItem>
@@ -226,7 +226,11 @@ const Cart = () => {
                             ""
                           ) : (
                             <div>
-                              {sumSalePrice + (sumSalePrice * 4) / 100} $
+                              {(
+                                sumSalePrice +
+                                (sumSalePrice * 4) / 100
+                              ).toFixed(2)}{" "}
+                              $
                             </div>
                           )}{" "}
                         </div>

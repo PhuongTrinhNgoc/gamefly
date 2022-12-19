@@ -87,20 +87,22 @@ const ListItem = () => {
             <div className="filter">
               <h6>Filter</h6>
 
-              <Box
-                sx={{
-                  width: 500,
+              <div
+                style={{
+                  width: "100%",
                   maxWidth: "100%",
                   position: "relative",
                 }}
               >
-                <TextField
+                <input
                   onChange={handleOnchange}
                   value={valueInput}
                   fullWidth
                   label="search"
                   id="fullWidth"
+                  placeholder="search"
                 />
+
                 {valueInput.length > 0 ? (
                   <button
                     onClick={() => {
@@ -113,7 +115,7 @@ const ListItem = () => {
                 ) : (
                   ""
                 )}
-              </Box>
+              </div>
             </div>
             {valueInput.length > 0 ? (
               <ItemsFilter>

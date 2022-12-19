@@ -131,11 +131,9 @@ export const MainListItem = styled.div`
       width: 100%;
       padding: 6px;
       border-radius: 10px;
+      border: 1px solid #000c;
       outline: none;
-      /* border: none; */
-      border-radius: 15px;
-      /* background: gray; */
-      border: 0.5px solid;
+
       transition: 0.8s;
     }
   }

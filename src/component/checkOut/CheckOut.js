@@ -13,12 +13,18 @@ import React, { useState } from "react";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import { useSelector } from "react-redux";
+import { CheckOutHome } from "../../css/cssHome";
 const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
   const [valueInputCode, setValueInputCode] = useState("");
 
   const SALECODE = "gamefly";
   const [expanded, setExpanded] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState("");
+  const { current } = useSelector((state) => state.products);
+
   //   const [bank, setBank] = React.useState("");
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -29,7 +35,7 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
   };
 
   return (
-    <div className="">
+    <CheckOutHome className="">
       {" "}
       {open === true ? (
         <div className="main-checkout">
@@ -39,7 +45,21 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
                 <div className="col-8">
                   <div className="title-checkout">
                     <h5>CHECKOUT</h5>
-                    <div>avatar- name</div>
+                    {current.name ? (
+                      <Stack
+                        sx={{
+                          display: "flex",
+                          flexDirection: "inherit",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Avatar alt="Remy Sharp" src={current.photoUrl} />
+                        <div style={{ marginLeft: "10px" }}>{current.name}</div>
+                      </Stack>
+                    ) : (
+                      <div>avatar- name</div>
+                    )}
                   </div>
                   <div className="main-atm">
                     <Accordion
@@ -304,7 +324,7 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
                           </div>
                           <div className="main-total">
                             <div className="input-sale">
-                              <div className="submmit-total">submmit</div>
+                              <div className="submmit-total">discount code</div>
                               <input
                                 value={valueInputCode}
                                 onChange={(e) => {
@@ -403,7 +423,7 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
       ) : (
         false
       )}
-    </div>
+    </CheckOutHome>
   );
 };
 export default CheckOut;
