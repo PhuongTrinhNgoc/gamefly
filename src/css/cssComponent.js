@@ -29,10 +29,9 @@ export const DflexAll = styled.div`
     margin-right: 20px;
   }
   &.user .icon-search {
-    /* margin-left: 20px; */
     margin-right: 20px;
     :hover .css-i4bv87-MuiSvgIcon-root {
-      color: #2871c6;
+      color: #2871c6 !important;
       cursor: pointer;
     }
   }
