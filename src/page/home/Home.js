@@ -38,6 +38,8 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 const Home = () => {
   const [open, setOpen] = useState(false);
+  const [valueInput, setValueInput] = useState();
+
   const [expanded, setExpanded] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState("");
   const { current } = useSelector((state) => state.products);
@@ -51,6 +53,12 @@ const Home = () => {
   const handleChangeCheck = (event) => {
     setSelectedValue(event.target.value);
   };
+  const SALECODE = "gamefly";
+
+  const handleChaneCode = (e) => {
+    setValueInput(e.target.value);
+  };
+
   const tatalAll =
     buy.length > 0
       ? buy.reduce((a, b) => {
@@ -375,6 +383,10 @@ const Home = () => {
                                       <h6 className="h6-price">
                                         {item.price} $
                                       </h6>
+
+                                      <span style={{ color: "red" }}>
+                                        - {item.sale} %
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -387,23 +399,34 @@ const Home = () => {
                               <div> price</div>
                               <div>
                                 {buy.length > 0
-                                  ? buy.reduce((a, b) => {
-                                      return a + b.price;
-                                    }, 0)
+                                  ? buy
+                                      .reduce((a, b) => {
+                                        return a + b.price;
+                                      }, 0)
+                                      .toFixed(0)
                                   : undefined}
                                 <span style={{ marginLeft: "10px" }}>$</span>
                               </div>
                             </div>
                             <div className="d-flex">
+                              <div>texa</div>
+                              <div>4 %</div>
+                            </div>
+                            <div className="d-flex">
                               <div>Sale Discount</div>
-                              <div>{buy.sale}</div>
+                              <div>
+                                {valueInput === SALECODE ? <p>-20</p> : <>0</>}
+                              </div>
                             </div>
                           </div>
 
                           <div className="total-checkout d-flex">
                             <h6>Total</h6>
                             <h5>
-                              {sumSalePrice}
+                              {valueInput === SALECODE
+                                ? sumSalePrice - 20
+                                : sumSalePrice}
+
                               <span style={{ marginLeft: "10px" }}>$</span>
                             </h5>
                           </div>
@@ -413,13 +436,34 @@ const Home = () => {
                           <div>Payment Details:</div>
                           <div className="payment-bank">
                             <div>{selectedValue}</div>
-                            <div>$ {sumSalePrice}</div>
+
+                            <div>
+                              ${" "}
+                              {valueInput === SALECODE
+                                ? sumSalePrice - 20
+                                : sumSalePrice}
+                            </div>
                           </div>
                         </div>
 
                         <div className="main-total">
                           <div className="input-sale">
-                            <input placeholder="Enter a creator tag" />
+                            <input
+                              value={valueInput}
+                              onChange={handleChaneCode}
+                              placeholder="Enter a creator tag"
+                            />
+                            {valueInput == "" ? (
+                              <p className="insert">
+                                * Enter discount code (if any)
+                              </p>
+                            ) : valueInput === SALECODE ? (
+                              <p className="codePass">* valid discount code</p>
+                            ) : (
+                              <p className="codeFail">
+                                * Invalid discount code
+                              </p>
+                            )}
                           </div>
                         </div>
                       </div>

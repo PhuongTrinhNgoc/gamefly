@@ -311,9 +311,13 @@ const CheckOut = ({ open, cart, setOpen, sumSalePrice }) => {
                           <div className="d-flex price-cart ">
                             <div> price</div>
                             <div>
-                              {sumSalePrice}
+                              {sumSalePrice.toFixed(2)}
                               <span style={{ marginLeft: "10px" }}>$</span>
                             </div>
+                          </div>
+                          <div className="d-flex">
+                            <div>texa</div>
+                            <div>4 %</div>
                           </div>
                           <div className="d-flex">
                             <div>Sale Discount</div>

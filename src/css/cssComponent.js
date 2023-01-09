@@ -69,6 +69,7 @@ export const DflexAll = styled.div`
   &.user .login {
     text-decoration: none;
     color: #fff;
+
     padding: 2px;
     border: 1px solid transparent;
     border-radius: 25px;
@@ -80,6 +81,7 @@ export const DflexAll = styled.div`
     padding: 6px 10px;
     background-color: #2871c6;
     border-radius: 25px;
+    font-size: 14px;
   }
   .user-gg {
     /* position:absolute;
