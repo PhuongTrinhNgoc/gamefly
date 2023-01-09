@@ -22,7 +22,7 @@ export const DflexAll = styled.div`
     color: #fff;
     transition: 0.4s;
   }
-  &.user {
+  .user {
     display: flex;
     .icon-search-child:hover {
       color: #2871c6 !important;
@@ -34,8 +34,8 @@ export const DflexAll = styled.div`
   }
   &.user .icon-search {
     margin-right: 20px;
-    :hover .css-i4bv87-MuiSvgIcon-root {
-      color: #2871c6 !important;
+    :hover {
+      color: red !important;
       cursor: pointer;
     }
   }
