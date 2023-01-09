@@ -433,7 +433,7 @@ const Home = () => {
                         </div>
 
                         <div className="payment">
-                          <div>Payment Details:</div>
+                          <div>Payment Details :</div>
                           <div className="payment-bank">
                             <div>{selectedValue}</div>
 
