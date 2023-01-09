@@ -24,6 +24,10 @@ export const DflexAll = styled.div`
   }
   &.user {
     display: flex;
+    .icon-search-child:hover {
+      color: #2871c6 !important;
+      cursor: pointer;
+    }
   }
   .navbar .user .login {
     margin-right: 20px;
