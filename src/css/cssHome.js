@@ -1039,6 +1039,20 @@ export const CheckOutHome = styled.div`
   /* background: rgb(18, 18, 18); */
   color: #fff;
   font-family: Brutal, sans-serif;
+  .insert,
+  .codePass,
+  .codeFail {
+    font-size: 12px;
+  }
+  .insert {
+    color: gray;
+  }
+  .codePass {
+    color: green;
+  }
+  .codeFail {
+    color: red;
+  }
   .name-user-gg {
     margin-left: 10px;
   }

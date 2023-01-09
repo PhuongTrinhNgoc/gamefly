@@ -207,7 +207,11 @@ const Cart = () => {
                   <div className="d-flex price-cart">
                     <div> price</div>
                     <div>
-                      {sumSalePrice === NaN ? "" : <div>{sumSalePrice} $</div>}
+                      {sumSalePrice === NaN ? (
+                        ""
+                      ) : (
+                        <div>{sumSalePrice.toFixed(2)} $</div>
+                      )}
                     </div>
                   </div>
                   <div className="d-flex">
