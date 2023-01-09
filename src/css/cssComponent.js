@@ -38,10 +38,6 @@ export const DflexAll = styled.div`
   }
   &.user .icon-search {
     margin-right: 20px;
-    :hover {
-      color: red !important;
-      cursor: pointer;
-    }
   }
   &.user .icon-search .icon-search-child {
     font-size: 30px;
