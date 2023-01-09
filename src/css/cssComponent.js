@@ -29,10 +29,9 @@ export const DflexAll = styled.div`
     margin-right: 20px;
   }
   &.user .icon-search {
-    /* margin-left: 20px; */
     margin-right: 20px;
     :hover .css-i4bv87-MuiSvgIcon-root {
-      color: #2871c6;
+      color: #2871c6 !important;
       cursor: pointer;
     }
   }
@@ -83,6 +82,7 @@ export const DflexAll = styled.div`
     border-radius: 25px;
     font-size: 14px;
   }
+
   .user-gg {
     /* position:absolute;
     top: 3px;
@@ -91,6 +91,10 @@ export const DflexAll = styled.div`
     text-align: center;
     div div .css-1l1167e {
       padding: 0 !important;
+      background: transparent !important;
+    }
+    div div .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root:hover {
+      background-color: transparent !important;
     }
     img {
       width: 40%;
