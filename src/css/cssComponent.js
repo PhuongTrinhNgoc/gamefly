@@ -83,9 +83,7 @@ export const DflexAll = styled.div`
     border-radius: 25px;
     font-size: 14px;
   }
-  .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root:hover {
-    background-color: transparent !important;
-  }
+
   .user-gg {
     /* position:absolute;
     top: 3px;
@@ -96,7 +94,9 @@ export const DflexAll = styled.div`
       padding: 0 !important;
       background: transparent !important;
     }
-
+    div div .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root:hover {
+      background-color: transparent !important;
+    }
     img {
       width: 40%;
       border-radius: 50%;
