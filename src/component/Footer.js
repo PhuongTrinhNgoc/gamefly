@@ -77,11 +77,13 @@ export default function App() {
                 <MDBIcon icon="gem" className="me-3" />
                 FlyGame
               </h6>
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
+              <p>Explore the game world with gamefly</p>
+              <div style={{ display: "flex" }}>
+                <div style={{ marginRight: "10px" }}>
+                  <i className="fa-solid fa-globe"></i>
+                </div>
+                <div>Country / Region: VietNam</div>
+              </div>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
@@ -146,9 +148,6 @@ export default function App() {
               <p>
                 <MailIcon icon="envelope" className="me-3" />
                 info@example.com
-              </p>
-              <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
               </p>
               <ThemeProvider theme={theme}>
                 <Chip icon={<MdPhone />} label="Call me :  + 01 234 567 88" />
