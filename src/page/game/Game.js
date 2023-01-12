@@ -11,8 +11,6 @@ const Game = () => {
   const [reload, setReload] = useState("");
   const { products } = useSelector((state) => state.products);
 
-  // const { productsGame } = useSelector((state) => state.products);
-
   if (products === 0) return <h1>loading...</h1>;
 
   const dataFilter =
@@ -25,7 +23,6 @@ const Game = () => {
   return (
     <div style={{ paddingTop: "100px", background: "black" }}>
       <div className="container">
-        {/* <GameGenres /> */}
         <MainGame>
           <GameGenres />
 

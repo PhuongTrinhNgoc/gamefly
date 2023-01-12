@@ -89,7 +89,13 @@ const InfoGame = () => {
                     <p className="year-game">{itemForId.year}</p>
                     <div className="main-btn-infoGame">
                       <DflexAll className="user">
-                        <Link to="cart" className="login">
+                        <Link
+                          onClick={() => {
+                            dispatch(addToCart(itemForId));
+                          }}
+                          to="cart"
+                          className="login"
+                        >
                           <div style={{ padding: "10px 25px" }}>Buy Game</div>
                         </Link>
                       </DflexAll>

@@ -18,32 +18,8 @@ const GameList = ({ setReload }) => {
   console.log(itemsPagiGame);
   const { products } = useSelector((state) => state.products);
 
-  // const dataSort = [...itemsPagiGame];
-
-  // const dataSortM = [...itemsPagiGame].sort(function (a, b) {
-  //   return a.price - b.price;
-  // });
-
-  const handleChageSort = (e) => {
-    const value = e.target.value;
-    if (value == "1") {
-      return itemsPagiGame.price.sort(function (a, b) {
-        return a - b;
-      });
-    } else if (value == "2") {
-      return itemsPagiGame.price.sort(function (a, b) {
-        return b - a;
-      });
-    }
-  };
-
   return (
     <ItemsPagiGame>
-      <select onChange={handleChageSort}>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
       <div className="row">
         {itemsPagiGame &&
           itemsPagiGame.map((item, index) => {
