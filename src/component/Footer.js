@@ -77,13 +77,6 @@ export default function App() {
                 <MDBIcon icon="gem" className="me-3" />
                 FlyGame
               </h6>
-              <p>Explore the game world with gamefly</p>
-              <div style={{ display: "flex" }}>
-                <div style={{ marginRight: "10px" }}>
-                  <i className="fa-solid fa-globe"></i>
-                </div>
-                <div>Country / Region: VietNam</div>
-              </div>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
