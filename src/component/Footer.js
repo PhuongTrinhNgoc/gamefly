@@ -77,11 +77,13 @@ export default function App() {
                 <MDBIcon icon="gem" className="me-3" />
                 FlyGame
               </h6>
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
+              <p>Explore the world with flygame</p>
+              <div style={{ display: "flex" }}>
+                <div style={{ marginRight: "10px" }}>
+                  <i className="fa-solid fa-globe"></i>
+                </div>
+                <div>Country / Region: VietNam</div>
+              </div>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
@@ -141,14 +143,11 @@ export default function App() {
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <p>
                 <LocationOnIcon icon="home" className="me-2" />
-                New York, NY 10012, US
+                Ha Noi, NY 10012, VN
               </p>
               <p>
                 <MailIcon icon="envelope" className="me-3" />
-                info@example.com
-              </p>
-              <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+                flygame@gmail.com
               </p>
               <ThemeProvider theme={theme}>
                 <Chip icon={<MdPhone />} label="Call me :  + 01 234 567 88" />
@@ -162,7 +161,7 @@ export default function App() {
         className="text-center p-4"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
       >
-        © 2021 Copyright:
+        © 2023 Copyright:
         <a className="text-reset fw-bold" href="/">
           Phuonghehe.com
         </a>
