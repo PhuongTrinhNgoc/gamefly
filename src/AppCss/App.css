@@ -485,3 +485,14 @@
 .container div .mainGameChild .slick-slider .slick-next {
   top: -24px !important;
 }
+.main-category div div div div .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  color: #fff !important;
+}
+.main-category
+  div
+  div
+  div
+  div
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root:hover {
+  color: #2871c6 !important;
+}
