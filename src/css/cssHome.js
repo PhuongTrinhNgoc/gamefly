@@ -252,16 +252,16 @@ export const Margincategory = styled.div`
     }
   }
   .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
-    color: #fff !important;
+    color: #fff;
     :hover {
       color: #2871c6 !important;
       outline: 0;
     }
   }
-  button:focus:not(:focus-visible) {
+  /* button:focus:not(:focus-visible) {
     color: #2871c6 !important;
     outline: 0;
-  }
+  } */
 `;
 
 //blogbody
