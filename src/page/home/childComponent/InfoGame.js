@@ -89,8 +89,8 @@ const InfoGame = () => {
                     <p className="year-game">{itemForId.year}</p>
                     <div className="main-btn-infoGame">
                       <DflexAll className="user">
-                        <Link className="login">
-                          <div style={{ padding: "10px 25px" }}>Buy Games</div>
+                        <Link to="cart" className="login">
+                          <div style={{ padding: "10px 25px" }}>Buy Game</div>
                         </Link>
                       </DflexAll>
                       <div className="addCart">
@@ -131,8 +131,11 @@ const InfoGame = () => {
                             className="animate__repeat-2"
                             style={{ display: "flex", alignItems: "center" }}
                           >
-                            <SportsEsportsIcon />
-                            {itemForId.ps}
+                            <div style={{ marginRight: "10px" }}>
+                              <SportsEsportsIcon />
+                            </div>
+
+                            <div> {itemForId.ps}</div>
                           </span>
                         </div>
                       </FadeInUpDiv2>
@@ -141,7 +144,7 @@ const InfoGame = () => {
                           <span
                             style={{ display: "flex", alignItems: "center" }}
                           >
-                            <span>
+                            <span style={{ marginRight: "10px" }}>
                               <PersonIcon />
                             </span>
                             <span> {itemForId.player}</span>
