@@ -31,7 +31,6 @@ export function SimplePaper() {
 }
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -64,6 +63,8 @@ function a11yProps(index) {
 
 export default function BasicTabs() {
   const [listCateroly, setListCateroly] = useState("action");
+  const [focus, setFocus] = useState(1);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getitems(listCateroly));
@@ -93,9 +94,16 @@ export default function BasicTabs() {
             products.category.map((item, index) => {
               return (
                 <Tab
+                  style={
+                    focus === index + 1
+                      ? { color: "#2871c6", borderBottom: "1px solid #2871c6" }
+                      : { color: "#fff" }
+                  }
                   key={index}
                   onClick={() => {
-                    setListCateroly(item);
+                    setListCateroly(item, index);
+
+                    setFocus(index + 1);
                   }}
                   label={item}
                   {...a11yProps(index)}
