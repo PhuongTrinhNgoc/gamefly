@@ -47,7 +47,6 @@ const Header = () => {
     setAnchorEl(event.currentTarget);
   };
   const handleSearchHeader = () => {
-    console.log(showInput);
     setShowInput(!showInput);
   };
   const handleOnchange = (e) => {
