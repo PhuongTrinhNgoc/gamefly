@@ -15,7 +15,7 @@ const GameList = ({ setReload }) => {
     dispatch(getPaginationGame(value));
   }, [value]);
   const { itemsPagiGame } = useSelector((state) => state.products);
-  console.log(itemsPagiGame);
+
   const { products } = useSelector((state) => state.products);
 
   return (

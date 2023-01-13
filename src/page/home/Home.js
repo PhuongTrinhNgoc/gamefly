@@ -46,7 +46,6 @@ const Home = () => {
 
   const { products } = useSelector((state) => state.products);
   const { buy } = useSelector((state) => state.buys);
-  console.log(buy);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
