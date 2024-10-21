@@ -22,7 +22,7 @@ export const getFectProdust = createAsyncThunk(
   async () => {
     try {
       const responsive = await axios.get(
-        "https://game-fly-8caeb-default-rtdb.firebaseio.com/.json"
+        "https://console.firebase.google.com/project/project-game-15c1e/storage/project-game-15c1e.appspot.com/files"
       );
 
       return responsive.data;
@@ -37,7 +37,7 @@ export const getItemsCart = createAsyncThunk(
   async () => {
     try {
       const responsive = await axios.get(
-        "https://game-fly-8caeb-default-rtdb.firebaseio.com/.json"
+        "https://console.firebase.google.com/project/project-game-15c1e/storage/project-game-15c1e.appspot.com/files"
       );
 
       return responsive.data;
@@ -51,7 +51,7 @@ export const getitems = createAsyncThunk(
   async (listCateroly) => {
     try {
       let responsive = await axios.get(
-        `https://game-fly-8caeb-default-rtdb.firebaseio.com/items.json?orderBy="category"&equalTo="${listCateroly}"`
+        `https://console.firebase.google.com/project/project-game-15c1e/storage/project-game-15c1e.appspot.com/files/items.json?orderBy="category"&equalTo="${listCateroly}"`
       );
       const myArr = [];
 
@@ -67,7 +67,7 @@ export const getitems = createAsyncThunk(
 export const getById = createAsyncThunk("products/getById", async (itemId) => {
   try {
     const responsive = await axios.get(
-      `https://game-fly-8caeb-default-rtdb.firebaseio.com/items.json?orderBy="_id"&equalTo=${itemId}`
+      `https://console.firebase.google.com/project/project-game-15c1e/storage/project-game-15c1e.appspot.com/files/items.json?orderBy="_id"&equalTo=${itemId}`
     );
     const myArr1 = [];
 
@@ -86,7 +86,7 @@ export const getBlogById = createAsyncThunk(
   async (itemBlogId) => {
     try {
       const responsive = await axios.get(
-        `https://game-fly-8caeb-default-rtdb.firebaseio.com/blogs.json?orderBy="id"&equalTo=${itemBlogId}`
+        `https://console.firebase.google.com/project/project-game-15c1e/storage/project-game-15c1e.appspot.com/files/blogs.json?orderBy="id"&equalTo=${itemBlogId}`
       );
       const myArr2 = [];
 
@@ -104,7 +104,7 @@ export const getPagination = createAsyncThunk(
   async (startEnd) => {
     try {
       const responsive = await axios.get(
-        `https://game-fly-8caeb-default-rtdb.firebaseio.com/items.json?orderBy="_id"${startEnd}`
+        `https://console.firebase.google.com/project/project-game-15c1e/storage/project-game-15c1e.appspot.com/files/items.json?orderBy="_id"${startEnd}`
       );
 
       const myArr2 = [];
@@ -123,7 +123,7 @@ export const getPaginationGame = createAsyncThunk(
   async (value) => {
     try {
       const responsive = await axios.get(
-        `https://game-fly-8caeb-default-rtdb.firebaseio.com/items.json?orderBy="_id"${value}`
+        `https://console.firebase.google.com/project/project-game-15c1e/storage/project-game-15c1e.appspot.com/files/items.json?orderBy="_id"${value}`
       );
 
       const myArr2 = [];
