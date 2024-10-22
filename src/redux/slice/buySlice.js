@@ -10,7 +10,7 @@ const buySlice = createSlice({
   reducers: {
     buyItem: (state = initialState, action) => {
       console.log(state.buy, action);
-      const itemFind = state.buy.find((p) => p._id === action.payload._id);
+      const itemFind = state.buy.find((p) => p.id === action.payload.id);
 
       if (!itemFind) {
         return { buy: [action.payload] };
