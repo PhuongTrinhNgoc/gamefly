@@ -49,7 +49,7 @@ const GameGenres = () => {
           products.sliceListItem.map((item, index) => {
             return (
               <div key={index} className="pa">
-                <Link to={`infoGame/${item._id}`}>
+                <Link to={`infoGame/${item.id}`}>
                   <div className="pa-1">
                     <div>
                       <img src={item.imgItem} />
