@@ -36,7 +36,7 @@ const ListItemsChild = (props) => {
   };
   return (
     <>
-      <Link to={`infoGame/${items._id}`}>
+      <Link to={`infoGame/${items.id}`}>
         <ItemsPadding>
           <ImgHoverItem src={items.imgItem} />
 
