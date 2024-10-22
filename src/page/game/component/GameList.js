@@ -25,7 +25,7 @@ const GameList = ({ setReload }) => {
           itemsPagiGame.map((item, index) => {
             return (
               <div key={index} className="col-3 main-itemsPagiGame">
-                <Link to={`infoGame/${item._id}`}>
+                <Link to={`infoGame/${item.id}`}>
                   <img src={item.imgItem} />
                   <div className="title-itemsPagiGame">
                     <div>{item.name}</div>
