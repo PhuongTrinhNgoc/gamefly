@@ -73,7 +73,7 @@ const Game = () => {
                         {dataFilter.map((item, index) => {
                           console.log(item);
                           return (
-                            <Link key={index} to={`infoGame/${item._id}`}>
+                            <Link key={index} to={`infoGame/${item.id}`}>
                               <li>
                                 {" "}
                                 <img
