@@ -123,7 +123,7 @@ export const getPaginationGame = createAsyncThunk(
   async (value) => {
     try {
       const responsive = await axios.get(
-        `hhttps://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json?orderBy="id"${value}`
+        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json?orderBy="id"${value}`
       );
 
       const myArr2 = [];
