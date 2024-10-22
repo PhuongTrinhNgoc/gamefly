@@ -70,7 +70,7 @@ const ListItem = () => {
                     <>
                       {" "}
                       <Link
-                        to={`infoGame/${item._id}`}
+                        to={`infoGame/${item.id}`}
                         key={index}
                         className="col-3 main-content-pagination"
                       >
@@ -123,7 +123,7 @@ const ListItem = () => {
                   <ul>
                     {dataFilter.map((a, b) => {
                       return (
-                        <Link to={`infoGame/${a._id}`} key={b}>
+                        <Link to={`infoGame/${a.id}`} key={b}>
                           <li>
                             {" "}
                             <img className="img-filter" src={a.imgItem} />
