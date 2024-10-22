@@ -15,7 +15,7 @@ const cartSlice = createSlice({
       const Alert = React.forwardRef(function Alert(props, ref) {
         return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
       });
-      const itemFind = state.cart.find((p) => p._id === action.payload._id);
+      const itemFind = state.cart.find((p) => p.id === action.payload.id);
 
       if (!itemFind) {
         return { cart: [...state.cart, action.payload] };
@@ -24,7 +24,7 @@ const cartSlice = createSlice({
     deleteCart: (state = initialState, action) => {
       const newListCart = state.cart;
       const objIndex = newListCart.findIndex(
-        (obj) => obj._id === action.payload._id
+        (obj) => obj.id === action.payload.id
       );
 
       newListCart.splice(objIndex, 1);
@@ -32,7 +32,7 @@ const cartSlice = createSlice({
       //   return { cart: [...newListCart] };
     },
     buyItem: (state = initialState, action) => {
-      const itemFind = state.buy.find((p) => p._id === action.payload._id);
+      const itemFind = state.buy.find((p) => p.id === action.payload.id);
 
       if (!itemFind) {
         return { buy: [...state.cart, action.payload] };
