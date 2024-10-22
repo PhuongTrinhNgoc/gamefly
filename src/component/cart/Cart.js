@@ -49,7 +49,7 @@ const Cart = () => {
                   <ChildCart1 key={b} className="child-cart-1">
                     <div className="child-cart">
                       <CartItem className="cart-item">
-                        <Link to={`infoGame/${a._id}`} className="img-cart ">
+                        <Link to={`infoGame/${a.id}`} className="img-cart ">
                           <ImgCart src={a.imgItem} />
                         </Link>
                         <div className="main-Up-Dow">
@@ -77,7 +77,7 @@ const Cart = () => {
                             </div>
                             <Link
                               className="name-cart"
-                              to={`infoGame/${a._id}`}
+                              to={`infoGame/${a.id}`}
                             >
                               <h5>{a.name}</h5>
                             </Link>
