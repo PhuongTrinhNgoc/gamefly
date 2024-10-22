@@ -86,7 +86,7 @@ export const getBlogById = createAsyncThunk(
   async (itemBlogId) => {
     try {
       const responsive = await axios.get(
-        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app//blogs.json?orderBy="id"&equalTo=${itemBlogId}`
+        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/blogs.json?orderBy="id"&equalTo=${itemBlogId}`
       );
       const myArr2 = [];
 
