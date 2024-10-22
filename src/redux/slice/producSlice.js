@@ -22,7 +22,7 @@ export const getFectProdust = createAsyncThunk(
   async () => {
     try {
       const responsive = await axios.get(
-        "gs://project-game-15c1e.appspot.com/files"
+        "https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json"
       );
 
       return responsive.data;
@@ -37,7 +37,7 @@ export const getItemsCart = createAsyncThunk(
   async () => {
     try {
       const responsive = await axios.get(
-        "https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        "https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json"
       );
 
       return responsive.data;
@@ -51,7 +51,7 @@ export const getitems = createAsyncThunk(
   async (listCateroly) => {
     try {
       let responsive = await axios.get(
-        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/?orderBy="category"&equalTo="${listCateroly}"`
+        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json?orderBy="category"&equalTo="${listCateroly}"`
       );
       const myArr = [];
 
@@ -67,7 +67,7 @@ export const getitems = createAsyncThunk(
 export const getById = createAsyncThunk("products/getById", async (itemId) => {
   try {
     const responsive = await axios.get(
-      `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/?orderBy="_id"&equalTo=${itemId}`
+      `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json?orderBy="_id"&equalTo=${itemId}`
     );
     const myArr1 = [];
 
@@ -86,7 +86,7 @@ export const getBlogById = createAsyncThunk(
   async (itemBlogId) => {
     try {
       const responsive = await axios.get(
-        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/blogs.json?orderBy="id"&equalTo=${itemBlogId}`
+        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json/blogs.json?orderBy="id"&equalTo=${itemBlogId}`
       );
       const myArr2 = [];
 
@@ -104,7 +104,7 @@ export const getPagination = createAsyncThunk(
   async (startEnd) => {
     try {
       const responsive = await axios.get(
-        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/?orderBy="_id"${startEnd}`
+        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json?orderBy="_id"${startEnd}`
       );
 
       const myArr2 = [];
@@ -123,7 +123,7 @@ export const getPaginationGame = createAsyncThunk(
   async (value) => {
     try {
       const responsive = await axios.get(
-        `https://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/?orderBy="_id"${value}`
+        `hhttps://project-game-15c1e-default-rtdb.asia-southeast1.firebasedatabase.app/.json?orderBy="_id"${value}`
       );
 
       const myArr2 = [];
